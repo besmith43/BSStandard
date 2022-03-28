@@ -1,0 +1,7 @@
+﻿<Project>
+<PropertyGroup>
+    <Company>BSmith</Company>
+    <Version>1.1.14</Version>
+    <AssemblyTitle>MoodTracker</AssemblyTitle>
+</PropertyGroup>
+</Project>

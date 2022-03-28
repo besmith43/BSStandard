@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "BSmith",
+    "classifications": [ "Common", "Worker", "Web" ],
+    "identity": "BSmith.Worker.Service",
+    "name": "BSmith.Worker.Service",
+    "shortName": "BSWorker",
+    "tags": {
+      "language": "C#",
+      "type": "item"
+    },
+    "sourceName": "BSmith.Worker.Service",
+    "preferNameDirectory":true
+  }

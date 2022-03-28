@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "BSmith",
+    "classifications": [ "Common", "WPF" ],
+    "identity": "BSmith.WPF.Net48",
+    "name": "BSmith.WPF.Net48",
+    "shortName": "BSWPF48",
+    "tags": {
+      "language": "C#",
+      "type": "item"
+    },
+    "sourceName": "BSmith.WPF.Net48",
+    "preferNameDirectory":true
+  }

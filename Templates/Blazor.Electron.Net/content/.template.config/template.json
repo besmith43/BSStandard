@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "BSmith",
+    "classifications": [ "Common", "Blazor", "Electron" ],
+    "identity": "Blazor.Electron.Net",
+    "name": "Blazor.Electron.Net",
+    "shortName": "BlazElecNet",
+    "tags": {
+      "language": "C#",
+      "type": "item"
+    },
+    "sourceName": "BSmith.Blazor.Electron.Net",
+    "preferNameDirectory":true
+  }

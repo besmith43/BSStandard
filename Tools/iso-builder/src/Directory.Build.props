@@ -1,0 +1,7 @@
+﻿<Project>
+<PropertyGroup>
+    <Company>BSmith</Company>
+    <Version>1.2.14</Version>
+    <AssemblyTitle>iso_builder</AssemblyTitle>
+</PropertyGroup>
+</Project>

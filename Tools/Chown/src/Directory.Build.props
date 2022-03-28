@@ -1,0 +1,7 @@
+<Project>
+<PropertyGroup>
+    <Company>BSmith</Company>
+    <Version>1.0.0</Version>
+    <AssemblyTitle>Chown</AssemblyTitle>
+</PropertyGroup>
+</Project>

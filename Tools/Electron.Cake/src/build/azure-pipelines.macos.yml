@@ -1,0 +1,55 @@
+trigger:
+  branches:
+    include:
+      - "*"
+  paths:
+    exclude:
+      - README.md
+      - CONTRIBUTING.md
+      - LICENSE
+pr:
+  branches:
+    include:
+      - "*"
+schedules:
+  - cron: "0 12 * * 0"
+    displayName: Weekly Sunday build
+    branches:
+      include:
+      - master
+    always: true
+pool:
+  vmImage: macOS-10.14
+steps:
+  - bash: "sudo curl -o /usr/local/bin/nuget.exe https://dist.nuget.org/win-x86-commandline/latest/nuget.exe"
+    displayName: "Install Nuget"
+
+  - bash: "alias nuget='mono /usr/local/bin/nuget.exe'"
+    displayName: "Set nuget alias"
+
+  - bash: "mkdir ./testrunner && sudo chmod -R 777 ./testrunner && ls"
+    displayName: "Create test runner lib"    
+
+  - task: UseDotNet@2 
+    displayName: ".NET Core 3.1.x"
+    inputs:
+      version: '3.1.x'
+      packageType: sdk
+
+  - task: UseDotNet@2 
+    displayName: ".NET Core 2.1.x"
+    inputs:
+      version: '2.1.x'
+      packageType: sdk
+
+  - task: Bash@3
+    displayName: 'Compile & Tests'
+    inputs:
+      targetType: filePath
+      filePath: ./build.sh
+
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFormat: "VSTest"
+      testResultsFiles: "**/*.trx"
+      testRunTitle: "Cake.Electron.Net.Tests"

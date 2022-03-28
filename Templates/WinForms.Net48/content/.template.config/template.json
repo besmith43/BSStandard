@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "BSmith",
+    "classifications": [ "Common", "WinForms" ],
+    "identity": "BSmith.WinForms",
+    "name": "BSmith.WinForms",
+    "shortName": "BSWinForms",
+    "tags": {
+      "language": "C#",
+      "type": "item"
+    },
+    "sourceName": "BSmith.WinForms",
+    "preferNameDirectory":true
+  }

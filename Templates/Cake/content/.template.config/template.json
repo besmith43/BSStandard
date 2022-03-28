@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "BSmith",
+    "classifications": [ "Common", "Build" ],
+    "identity": "Cake.Build",
+    "name": "Cake Build File",
+    "shortName": "cake",
+    "tags": {
+      "language": "C#",
+      "type": "item"
+    },
+    "sourceName": "BSmith.Cake",
+    "preferNameDirectory":true
+  }

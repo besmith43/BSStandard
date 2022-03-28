@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "BSmith",
+    "classifications": [ "WinExe" ], 
+    "name": "Qml.Net.Template",
+    "identity": "Qml.Net.CSharp",         
+    "groupIdentity":"Qml.Net",
+    "shortName": "qml",                    // You can create the project using this short name instead of the one above.
+    "tags": {
+      "language": "C#",                         // Specify that this template is in C#.
+      "type":"Qml/GUI App"
+    },
+    "sourceName": "BSmith.Qml",              // Will replace the string 'MyProject.StarterWeb' with the value provided via -n.
+    "preferNameDirectory":true,
+    "symbols":{
+      "skipRestore": {
+            "type": "parameter",
+            "datatype": "bool",
+            "description": "If specified, skips the automatic restore of the project on create.",
+            "defaultValue": "false"
+      }
+    },
+    "postActions": [
+      {
+        "condition": "(!skipRestore)",
+        "description": "Restore NuGet packages required by this project.",
+        "manualInstructions": [
+          { "text": "Run 'dotnet restore'" }
+        ],
+        "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+        "continueOnError": true
+      }]
+  }

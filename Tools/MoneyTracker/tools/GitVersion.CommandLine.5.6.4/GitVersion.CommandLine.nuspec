@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>GitVersion.CommandLine</id>
+    <version>5.6.4</version>
+    <title>GitVersion.CommandLine</title>
+    <authors>GitTools and Contributors</authors>
+    <owners>GitTools and Contributors</owners>
+    <developmentDependency>true</developmentDependency>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>package_icon.png</icon>
+    <projectUrl>https://github.com/GitTools/GitVersion</projectUrl>
+    <description>Derives SemVer information from a repository following GitFlow or GitHubFlow.</description>
+    <releaseNotes>https://github.com/GitTools/GitVersion/releases</releaseNotes>
+    <copyright>Copyright GitTools 2021.</copyright>
+    <tags>Git Versioning GitVersion GitFlowVersion GitFlow GitHubFlow SemVer</tags>
+    <repository type="git" url="https://github.com/GitTools/GitVersion" branch="master" commit="519916b13047f32e6b336da644a6e6ec1659ee97" />
+  </metadata>
+</package>

@@ -1,0 +1,15 @@
+applies to both blazor.electron.net and console
+done -add option.cs and cmdParser.cs
+-add git commands to build.cake
+done -add sln
+done -add cake tool to package
+
+for qml.net
+done -recreate new folder structure
+done -do everything above
+
+test if new monogame template actually works
+
+for everything
+-verify that the template classification is correct
+

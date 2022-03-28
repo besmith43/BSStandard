@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="qml.net" Version="0.11.0" />
+    <PackageReference Include="qml.net.linuxbinaries" Version="0.11.0" />
+    <PackageReference Include="qml.net.osxbinaries" Version="0.11.0" />
+    <PackageReference Include="qml.net.windowsbinaries" Version="0.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="pages\**" >
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      <ExcludeFromSingleFile>false</ExcludeFromSingleFile>
+    </Content>
+  </ItemGroup>
+
+</Project>

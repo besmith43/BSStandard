@@ -1,0 +1,87 @@
+@using MoneyTracker.Class
+@using MoneyTracker.Class.Enums
+
+<div class="simple-form">
+
+    <div class="form-group">
+        <label>Category</label><br>
+        <select @bind="selectedCategory" name="category">
+           @foreach (var category in CategoryList)
+           {
+               <option value="@category">@category</option>
+           }
+        </select><br>
+        <label>Vendor</label>
+        <input @bind="selectedVendor" type="search" class="form-control" id="vendor" />
+        <label>Date</label>
+        <input @bind="selectedDate" type="date" class="form-control" id="date" />
+        <label>Purchase Price</label>
+        <input @bind="selectedPrice" type="number" class="form-control" id="price" />
+        <label>Payment Method</label><br>
+        <select @BindAttributes="@selectedSource" id="source">
+            @foreach (var payment in PaymentSourceList)
+            {
+                <option value="@payment">@payment</option>
+            }
+        </select>
+    </div>
+
+    <br>
+    <button @onclick="SubmitForm" class="btn btn-primary">Add</button>
+    <button @onclick="Cancel" class="btn btn-secondary">Cancel</button>
+</div>
+
+@code {
+    [CascadingParameter] BlazoredModalInstance BlazoredModal { get; set; }
+    
+    private List<string> CategoryList = new List<string>()
+    {
+        CategoryEnum.groceries,
+        CategoryEnum.toys,
+        CategoryEnum.food,
+        CategoryEnum.rent,
+        CategoryEnum.electric,
+        CategoryEnum.gas,
+        CategoryEnum.loan,
+        CategoryEnum.life,
+        CategoryEnum.car,
+        CategoryEnum.internet,
+        CategoryEnum.cellphone
+    };
+    
+    private List<string> PaymentSourceList = new List<string>()
+    {
+        PaymentSourceEnum.cash,
+        PaymentSourceEnum.check,
+        PaymentSourceEnum.barclay,
+        PaymentSourceEnum.capitalOne,
+        PaymentSourceEnum.paypal,
+        PaymentSourceEnum.paypalCredit
+    }; 
+
+    public string selectedCategory { get; set; } = CategoryEnum.food;
+    public string selectedVendor { get; set; }
+    public DateTime selectedDate { get; set; } = DateTime.Today;
+    public decimal selectedPrice { get; set; }
+    public string selectedSource { get; set; } = PaymentSourceEnum.capitalOne;
+
+    protected override void OnInitialized() => BlazoredModal.SetTitle("New Purchase");
+
+    async Task SubmitForm()
+    {
+        Transaction newItem = new Transaction
+        {
+            Category = selectedCategory,
+            Vendor = selectedVendor,
+            Date = selectedDate,
+            Price = decimal.Round(selectedPrice, 2),
+            PaymentSource = selectedSource
+        };
+
+        // send the newItem to the api
+
+        await BlazoredModal.CloseAsync(ModalResult.Ok("Form submitted successfully"));
+    }
+    async Task Cancel() => await BlazoredModal.CancelAsync();
+
+}

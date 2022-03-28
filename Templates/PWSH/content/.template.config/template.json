@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "BSmith",
+    "classifications": [ "Common", "Console" ],
+    "identity": "BSmith.PWSH",
+    "name": "BSmith.PWSH",
+    "shortName": "BSPWSH",
+    "tags": {
+      "language": "C#",
+      "type": "item"
+    },
+    "sourceName": "BSmith.PWSH",
+    "preferNameDirectory":true
+  }

@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "BSmith",
+    "classifications": [ "Common", "MonoGame" ],
+    "identity": "BSmith.MonoGame",
+    "name": "BSmith.MonoGame",
+    "shortName": "BSMonoGame",
+    "tags": {
+      "language": "C#",
+      "type": "item"
+    },
+    "sourceName": "BSmith.MonoGame",
+    "preferNameDirectory":true
+  }

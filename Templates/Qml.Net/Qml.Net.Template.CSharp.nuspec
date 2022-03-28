@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Qml.Net.Template.CSharp</id>
+    <version>1.0.1-alpha</version>
+    <description>
+      Creates basic hello world gui app using QML.
+    </description>
+    <authors>Blake Smith</authors>
+    <projectUrl>http://gitea.besmith.tech/besmith43/Qml.Net.Template</projectUrl>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+  </metadata>
+</package>

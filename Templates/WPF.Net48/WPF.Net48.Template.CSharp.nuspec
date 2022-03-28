@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>BSmith.WPF.Net48.Template.CSharp</id>
+    <version>1.0.0-alpha</version>
+    <description>
+      Creates basic hello world WPF app in .Net Framework 4.8.
+    </description>
+    <authors>Blake Smith</authors>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+  </metadata>
+</package>

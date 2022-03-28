@@ -1,0 +1,7 @@
+﻿<Project>
+<PropertyGroup>
+    <Company>BSmith</Company>
+    <Version>1.0.4</Version>
+    <AssemblyTitle>DiffFolder</AssemblyTitle>
+</PropertyGroup>
+</Project>

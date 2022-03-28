@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "BSmith",
+    "classifications": [ "Common", "Winforms", "System Tray" ],
+    "identity": "BSmith.SysTray.Net48",
+    "name": "BSmith.SysTray.Net48",
+    "shortName": "BSSysTray48",
+    "tags": {
+      "language": "C#",
+      "type": "item"
+    },
+    "sourceName": "BSmith.SysTray.Net48",
+    "preferNameDirectory":true
+  }

@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "BSmith",
+    "classifications": [ "Web", "Blazor" ],
+    "identity": "BSmith.Blazor.Server",
+    "name": "BSmith.Blazor.Server",
+    "shortName": "BSBlazorServer",
+    "tags": {
+      "language": "C#",
+      "type": "item"
+    },
+    "sourceName": "BSmith.Blazor.Server",
+    "preferNameDirectory":true
+  }

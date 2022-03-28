@@ -1,0 +1,7 @@
+-need to have async and non-async functions for each action (where reasonable)
+-need to have cli and gui friendly versions or flags (where reasonable)
+-each library needs a list of the actions that they perform
+-each library should not have using statements for system libraries
+    (I don't know why that's a benefit but it sounds like a good idea)
+
+

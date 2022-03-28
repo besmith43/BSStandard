@@ -1,0 +1,7 @@
+﻿<Project>
+<PropertyGroup>
+    <Company>BSmith</Company>
+    <Version>1.2.2</Version>
+    <AssemblyTitle>FolderSize</AssemblyTitle>
+</PropertyGroup>
+</Project>

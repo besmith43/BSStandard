@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "BSmith",
+    "classifications": [ "Common", "Console" ],
+    "identity": "BSmith.Console.Net48",
+    "name": "BSmith.Console.Net48",
+    "shortName": "BSConsole48",
+    "tags": {
+      "language": "C#",
+      "type": "item"
+    },
+    "sourceName": "BSmith.Console.Net48",
+    "preferNameDirectory":true
+  }

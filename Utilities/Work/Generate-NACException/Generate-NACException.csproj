@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>BSStandard.Utilities.Work.Generate-NACException</PackageId>
+    <PackageVersion>1.0.0-beta</PackageVersion>
+    <Authors>Blake Smith</Authors>
+    <owners>Blake Smith</owners>
+    <description>Library to generate csv's for NAC Exception at TTU</description>
+    <releaseNotes>Initial 1.0.0 beta</releaseNotes>
+    <copyright>Copyright 2020 Blake Smith</copyright>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="2.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="resources\**" >
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+      <ExcludeFromSingleFile>false</ExcludeFromSingleFile>
+    </Content>
+  </ItemGroup>
+
+</Project>

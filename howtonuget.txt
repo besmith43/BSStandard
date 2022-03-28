@@ -1,0 +1,22 @@
+to generate a nuget package, just run dotnet pack
+
+to generate a nuget package with a defined package version
+dotnet pack -p:PackageVersion=1.0.1
+
+example of pushing to baget docker server
+
+dotnet nuget push -s http://besmith.synology.me:8004/v3/index.json -k XXXXXXXX .\UtilityLib.1.0.0.nupkg
+
+example of getting a package from a baget docker server
+
+dotnet add package UtilityLib -s http://besmith.synology.me:8004/v3/index.json
+
+example of installing a template
+
+dotnet new --install Qml.Net.Template.CSharp::1.0.0-alpha --nuget-source $BaGetServer
+
+related links
+
+https://loic-sharma.github.io/BaGet/configuration/
+
+https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-pack

@@ -1,0 +1,7 @@
+﻿<Project>
+<PropertyGroup>
+    <Company>BSmith</Company>
+    <Version>1.0.7</Version>
+    <AssemblyTitle>Sudo</AssemblyTitle>
+</PropertyGroup>
+</Project>

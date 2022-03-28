@@ -1,0 +1,10 @@
+﻿<Application x:Class="BSmith.WPF.Net48.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BSmith.WPF.Net48"
+             StartupUri="MainWindow.xaml"
+             Startup="app_Startup">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

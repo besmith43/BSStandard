@@ -1,0 +1,67 @@
+﻿@page "/budget"
+@using MoneyTracker.Class
+@using MoneyTracker.Data
+@inject NavigationManager uriHelper
+
+<PageTitle>Budget</PageTitle>
+
+<h1>Current Monthly Budget</h1>
+<br>
+
+@if (budgetItems == null)
+{
+	<p><em>Loading...</em></p>
+}
+else
+{
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Category</th>
+				<th>Budget Amount</th>
+				<th>Amount Spent</th>
+				<th>Percent of Budget Spent</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var budgetItem in budgetItems)
+			{
+				<tr>
+					<td>@budgetItem.Category</td>
+					<td>$@budgetItem.BudgetTotal</td>
+					<td>$@budgetItem.Spent</td>
+					<td>@budgetItem.Percent%</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+
+	<button class="btn btn-primary" style="float: right;" @onclick="@(() => AddNewPurchaseModal())">New Purchase</button>
+}
+
+@code {
+	private IEnumerable<BudgetSummary>? budgetItems;
+
+	private DbActions dbActions = new DbActions();
+
+	protected override async Task OnInitializedAsync()
+	{
+		budgetItems = dbActions.GetBudgetSummaries();
+	}
+	
+	// Section for running the modals
+
+	[CascadingParameter] public IModalService Modal { get; set; }
+
+	private async Task AddNewPurchaseModal()
+	{
+		var NewPurchaseModal = Modal.Show<NewPurchase>("New Purchase");
+		var result = await NewPurchaseModal.Result;
+
+		if (!result.Cancelled)
+		{
+			//trigger table update
+			uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);
+		}
+	}
+}

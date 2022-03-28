@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <Authors>Deniz İrgin</Authors>
+    <Company>Deniz İrgin</Company>
+    <Owners>Deniz İrgin</Owners>
+    <PackageProjectUrl>https://github.com/Blind-Striker/Cake.Electron.Net</PackageProjectUrl>
+    <PackageIcon>cake-contrib-medium.png</PackageIcon>
+    <Version>1.1.0</Version>
+  </PropertyGroup>
+</Project>

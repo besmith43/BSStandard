@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>BSStandard.Utilities.Scripting.PSWin</PackageId>
+    <PackageVersion>1.0.0-alpha</PackageVersion>
+    <Authors>Blake Smith</Authors>
+    <owners>Blake Smith</owners>
+    <description>Library to call powershell 5.1 from C#</description>
+    <releaseNotes>Initial 1.0.0 alpha</releaseNotes>
+    <copyright>Copyright 2020 Blake Smith</copyright>
+    <TargetFramework>net48</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.PowerShell.5.1.ReferenceAssemblies" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>

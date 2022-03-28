@@ -1,0 +1,68 @@
+[
+  {
+    "Category": "Groceries",
+    "Budget": "350",
+    "Spent": "113.87",
+    "Percent": "33"
+  },
+  {
+    "Category": "Toys",
+    "Budget": "0",
+    "Spent": "4.23",
+    "Percent": "0"
+  },
+  {
+    "Category": "Food",
+    "Budget": "150",
+    "Spent": "66.62",
+    "Percent": "44"
+  },
+  {
+    "Category": "Rent",
+    "Budget": "510",
+    "Spent": "510",
+    "Percent": "100"
+  },
+  {
+    "Category": "Electric",
+    "Budget": "100",
+    "Spent": "135",
+    "Percent": "135"
+  },
+  {
+    "Category": "Gas",
+    "Budget": "60",
+    "Spent": "40.69",
+    "Percent": "68"
+  },
+  {
+    "Category": "Loan",
+    "Budget": "160",
+    "Spent": "158",
+    "Percent": "99"
+  },
+  {
+    "Category": "Life Insurance",
+    "Budget": "140",
+    "Spent": "140",
+    "Percent": "100"
+  },
+  {
+    "Category": "Car Insurance",
+    "Budget": "120",
+    "Spent": "0",
+    "Percent": "0"
+  },
+  {
+    "Category": "Internet",
+    "Budget": "95",
+    "Spent": "95",
+    "Percent": "100"
+  },
+  {
+    "Category": "Cellphone",
+    "Budget": "35",
+    "Spent": "30.39",
+    "Percent": "87"
+  }
+]

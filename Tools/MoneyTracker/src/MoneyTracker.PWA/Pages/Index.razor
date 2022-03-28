@@ -1,0 +1,84 @@
+﻿@page "/"
+@inject IGetBudgetService GetBudgetService
+@inject HttpClient Http
+@inject NavigationManager uriHelper
+@using MoneyTracker.Class
+@using MoneyTracker.PWA.Services;
+
+<PageTitle>Index</PageTitle>
+
+<h1>Current Monthly Budget</h1>
+<br>
+
+@if (budgetItems == null)
+{
+	<p><em>Loading...</em></p>
+}
+else
+{
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Category</th>
+				<th>Budget Amount</th>
+				<th>Amount Spent</th>
+				<th>Percent of Budget Spent</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var budgetItem in budgetItems)
+			{
+				<tr>
+					<td>@budgetItem.Category</td>
+					<td>$@budgetItem.BudgetTotal</td>
+					<td>$@budgetItem.Spent</td>
+					<td>@budgetItem.Percent%</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+
+	<button class="btn btn-primary" style="float: right;" @onclick="@(() => AddNewPurchaseModal())">New Purchase</button>
+}
+
+@if (exceptionMessage != null)
+{
+	<p>@exceptionMessage.Message</p>
+}
+
+@code {
+	private BudgetSummary[]? budgetItems;
+
+	private Exception? exceptionMessage;
+
+	protected override async Task OnInitializedAsync()
+	{
+		// will later need to be an API call
+		//budgetItems = await Http.GetFromJsonAsync<BudgetSummary[]>("sample-data/index-budget.json");
+		try
+		{
+			//budgetItems = await Http.GetFromJsonAsync<BudgetSummary[]>("https://localhost:7121/Budget");
+			budgetItems = (await GetBudgetService.GetAllItems()).ToArray();
+		}
+		catch (Exception ex)
+		{
+			exceptionMessage = ex;
+		}
+	}
+	
+	// Section for running the modals
+
+	[CascadingParameter] public IModalService Modal { get; set; }
+
+	private async Task AddNewPurchaseModal()
+	{
+		var NewPurchaseModal = Modal.Show<NewPurchase>("New Purchase");
+		var result = await NewPurchaseModal.Result;
+
+		if (!result.Cancelled)
+		{
+			//trigger table update
+			uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);
+		}
+	}
+}
